@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
     />
     <!-- MDB ESSENTIAL -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
+   <link rel="stylesheet" href="src/mdb/scss/mdb.pro.css" />
     <!-- MDB PLUGINS -->
     <link rel="stylesheet" href="plugins/css/all.min.css" />
     <!-- Custom styles -->
@@ -222,12 +222,11 @@
       <div class="col-lg-5">
         <div class="card cascading-left rounded-6 shadow-5">
           <div class="card-body px-4 p-4 p-md-5 p-lg-4 p-xl-5">
-            <h3 class="mb-4">What places to visit during your first trip to Italy? 5 suggestions for backpackers.</h3>
-            <p class="text-muted mb-4">Amet consectetur adipisicing elit quam, natus eum repellendus harum dolore
-              dolorum impedit quas blanditiis amet temporibus assumenda iusto. <span class="d-none d-xl-inline">Fugiat
-                voluptatum provident porro tempore corporis minus vero sint occaecat cupidatat.</span></p>
-            <button class="btn btn-warning" data-mdb-ripple-init>Read more <i
-                class="fas fa-angle-right ms-1"></i></button>
+            <h3 class="mb-4">如何找到屬於自己的茶？帶你了解不同茶類與風味</h3>
+            <p class="text-muted mb-4">茶不僅是一種日常飲品，更是一項融合文化、歷史與科學的知識領域。
+              本網站將帶領讀者從茶的起源與發展開始，逐步認識不同茶類的特色，同時了解正確的沖泡方式與品飲技巧，
+              讓每個人都能更深入體驗茶的魅力。</span></p>
+
           </div>
         </div>
       </div>
@@ -354,7 +353,7 @@
   </style>
 
   <div id="intro" class="bg-image"
-    style="background-image:; height: 60vh;">
+    style="background-image:z; height: 60vh;">
     <div class="mask">
       <div class="container d-flex justify-content-center align-items-center h-100">
         <div class="row align-items-center">
@@ -442,7 +441,7 @@
         </style>
 
         <div id="pricing-block-5" class="background-radial-gradient text-center text-white">
-          <h2 class="fw-bold">Pricing</h2>
+          <h2 class="fw-bold">產品認知</h2>
         </div>
 
         <div class="row mx-4 mx-md-5" style="margin-top: -200px">
@@ -462,15 +461,19 @@
               <div class="card-body">
                 <ol class="list-unstyled mb-0">
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Unlimited
-                    updates
+                    <i class="fas fa-check text-success me-3"></i>茶色深、茶味明顯
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Git repository
+                    <i class="fas fa-check text-success me-3"></i>容易提神
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>npm
-                    installation
+                    <i class="fas fa-check text-success me-3"></i>入門款、日常飲用首選
+
+                  <li class="mb-3">
+                    <i class="fas fa-check text-success me-3"></i>國際市場接受度最高，通用性強
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-check text-success me-3"></i>適合做成 奶茶、即飲茶、早餐茶
                   </li>
                 </ol>
               </div>
@@ -493,31 +496,24 @@
               <div class="card-body">
                 <ol class="list-unstyled mb-0">
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Unlimited
-                    updates
+                    <i class="fas fa-check text-success me-3"></i>茶色清透、口感清爽
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Git repository
+                    <i class="fas fa-check text-success me-3"></i>健康、養生、少加工
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>npm
-                    installation
+                    <i class="fas fa-check text-success me-3"></i>有「回甘」與青草香氣
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Code examples
+                    <i class="fas fa-check text-success me-3"></i>健康導向、生活風格型產品
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Premium
-                    snippets
+                    <i class="fas fa-check text-success me-3"></i>品牌形象偏自然、簡約
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Premium
-                    support
+                    <i class="fas fa-check text-success me-3"></i>適合做成 無糖茶、冷泡茶、養生茶
                   </li>
-                  <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Drag&amp;Drop
-                    builder
-                  </li>
+
                 </ol>
               </div>
             </div>
@@ -527,33 +523,31 @@
             <div class="card h-100 rounded-lg-top-start rounded-lg-bottom-start">
               <div class="card-header text-center pt-4">
                 <p class="text-uppercase">
-                  <strong>烏龍茶</strong>
+                  <strong>層次、品質、品味象徵</strong>
                 </p>
                 <h3 class="mb-4">
-                  <strong>$ 299</strong>
-                  <small class="text-muted" style="font-size: 16px">/year</small>
+                  <strong>烏龍茶</strong>
+                  <small class="text-muted" style="font-size: 16px"></small>
                 </h3>
               </div>
               <div class="card-body">
                 <ol class="list-unstyled mb-0">
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Unlimited
-                    updates
+                    <i class="fas fa-check text-success me-3"></i>茶色清澈透亮、口感圓潤厚實
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Git repository
+                    <i class="fas fa-check text-success me-3"></i>不苦不澀，耐喝
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>npm
-                    installation
+                    <i class="fas fa-check text-success me-3"></i>香氣多變
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Code examples
+                    <i class="fas fa-check text-success me-3"></i>可多次沖泡
                   </li>
                   <li class="mb-3">
-                    <i class="fas fa-check text-success me-3"></i>Premium
-                    snippets
+                    <i class="fas fa-check text-success me-3"></i>適合 純飲、精品茶、品牌代表茶
                   </li>
+
                 </ol>
               </div>
             </div>
@@ -588,12 +582,11 @@
   <!--Section: Design Block-->
   <section>
 
-    <h3 class="text-center mb-5">Our services</h3>
+    <h3 class="text-center mb-5">沖泡方式</h3>
 
     <p class="text-center mb-5 mx-auto w-responsive">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum laborum animi doloremque
-      nam dicta veniam dolor ea nostrum excepturi laboriosam molestiae, expedita odit id! Sunt
-      quia cumque consequatur perferendis hic.
+      同樣的茶葉，換一種沖泡方式，就能帶出截然不同的味道與個性；
+從傳統熱泡、冷泡、茶粉沖泡再到高壓萃取，每一種方式都讓品茶變得更有趣。
     </p>
 
     <div class="row">
@@ -603,19 +596,19 @@
         <ul class="nav nav-pills nav-justified mb-3 mx-n2 mt-n2" id="servicesTabs" role="tablist">
           <li class="nav-item" role="presentation">
             <a class="nav-link active" id="therapy-tab" data-mdb-pill-init href="#therapy" role="tab"
-              aria-controls="therapy" aria-selected="true"><i class="far fa-gem me-2"></i>Therapy</a>
+              aria-controls="therapy" aria-selected="true"><i class="far fa-gem me-2"></i>傳統熱泡</a>
           </li>
           <li class="nav-item" role="presentation">
             <a class="nav-link" id="massage-tab" data-mdb-pill-init href="#massage" role="tab" aria-controls="massage"
-              aria-selected="false"><i class="far fa-sun me-2"></i>Massage</a>
+              aria-selected="false"><i class="far fa-sun me-2"></i>冷泡茶</a>
           </li>
           <li class="nav-item" role="presentation">
             <a class="nav-link" id="cosmetic-tab" data-mdb-pill-init href="#cosmetic" role="tab"
-              aria-controls="cosmetic" aria-selected="false"><i class="fas fa-star me-2"></i>Cosmetic</a>
+              aria-controls="cosmetic" aria-selected="false"><i class="fas fa-star me-2"></i>茶粉沖泡</a>
           </li>
           <li class="nav-item" role="presentation">
             <a class="nav-link" id="harmony-tab" data-mdb-pill-init href="#harmony" role="tab" aria-controls="harmony"
-              aria-selected="false"><i class="fas fa-coffee me-2"></i>Harmony</a>
+              aria-selected="false"><i class="fas fa-coffee me-2"></i>高壓萃取</a>
           </li>
         </ul>
         <!-- Pills navs -->
@@ -629,13 +622,13 @@
                   class="img-fluid shadow-3 rounded" alt="Sample image" />
               </div>
               <div class="col-lg-6">
-                <h4 class="mb-4">Face and body treatments</h4>
+                <h4 class="mb-4">傳統熱泡</h4>
                 <p class="lead mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi soluta ratione quisquam,
-                  dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque delectus, beatae
-                  maxime temporibus maiores quibusdam quasi.Rem magnam ad perferendis iusto sint tempora ea
-                  voluptatibus iure, animi excepturi modi aut possimus in hic molestias repellendus illo ullam odit
-                  quia velit.
+                  先用熱水將茶壺和茶杯溫熱，讓茶具保持適合的溫度。接著將茶葉放入茶壺中，一般約 5–8 克，視茶種而定。
+                  慢慢沿壺邊注入熱水，水溫依茶種調整：綠茶約 80°C、烏龍茶約 90°C、紅茶約 95°C。
+                  茶葉浸泡時間也依茶種不同，綠茶約 1–2 分鐘、烏龍茶約 2–3 分鐘、紅茶約 3–5 分鐘。
+                  浸泡完成後將茶湯倒入茶杯，即可品飲。優質茶葉可多次沖泡，每次茶味會略有不同，並可在泡茶過程中聞香，
+                  享受茶的層次感。
                 </p>
               </div>
             </div>
@@ -647,13 +640,12 @@
                   class="img-fluid shadow-3 rounded" alt="Sample image" />
               </div>
               <div class="col-lg-6">
-                <h4 class="mb-4">Massages</h4>
+                <h4 class="mb-4">冷泡茶</h4>
                 <p class="lead mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi soluta ratione quisquam,
-                  dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque delectus, beatae
-                  maxime temporibus maiores quibusdam quasi.Rem magnam ad perferendis iusto sint tempora ea
-                  voluptatibus iure, animi excepturi modi aut possimus in hic molestias repellendus illo ullam odit
-                  quia velit.
+                  將茶葉放入乾淨的茶壺或玻璃瓶中，一般約 5–8 克，依茶種調整。
+                  加入冰水或常溫水，水量視茶葉多寡而定，確保茶葉能充分浸泡。
+                  蓋好容器後，將茶放入冰箱冷藏浸泡約 6–12 小時（綠茶可稍短，烏龍茶和紅茶可較久），
+                  泡出清香茶湯後即可倒出品飲。冷泡茶口感清爽，茶味柔和，且可多次續泡，每次茶香略有不同。
                 </p>
               </div>
             </div>
@@ -665,13 +657,13 @@
                   class="img-fluid shadow-3 rounded" alt="Sample image" />
               </div>
               <div class="col-lg-6">
-                <h4 class="mb-4">Cosmetics</h4>
+                <h4 class="mb-4">茶粉沖泡</h4>
                 <p class="lead mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi soluta ratione quisquam,
-                  dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque delectus, beatae
-                  maxime temporibus maiores quibusdam quasi.Rem magnam ad perferendis iusto sint tempora ea
-                  voluptatibus iure, animi excepturi modi aut possimus in hic molestias repellendus illo ullam odit
-                  quia velit.
+                  取適量茶粉（一般 1–2 克，依茶種調整）放入茶杯或茶壺中，
+                  先加入少量熱水（約 60–80°C）將茶粉攪拌均勻，形成茶糊，
+                  再慢慢加入剩餘熱水至所需容量。充分攪拌後即可飲用。
+                  茶粉沖泡口感濃郁，茶香容易釋放，若喜歡更細緻口感，可使用茶刷或攪拌器攪拌均勻，
+                  茶湯會更加滑順。
                 </p>
               </div>
             </div>
@@ -683,13 +675,11 @@
                   class="img-fluid shadow-3 rounded" alt="Sample image" />
               </div>
               <div class="col-lg-6">
-                <h4 class="mb-4">Harmony</h4>
+                <h4 class="mb-4">高壓萃取</h4>
                 <p class="lead mb-0">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo animi soluta ratione quisquam,
-                  dicta ab cupiditate iure eaque? Repellendus voluptatum, magni impedit eaque delectus, beatae
-                  maxime temporibus maiores quibusdam quasi.Rem magnam ad perferendis iusto sint tempora ea
-                  voluptatibus iure, animi excepturi modi aut possimus in hic molestias repellendus illo ullam odit
-                  quia velit.
+                  將茶葉放入專用高壓萃取設備或茶膠囊容器中，使用高壓熱水（一般 90–95°C，壓力約 8–10 巴）快速萃取茶香與茶味，
+                  萃取時間通常 30 秒到 1 分鐘即可完成。常用設備包括家用或商用高壓茶機、咖啡式膠囊萃取機及商用自動萃茶機，
+                  能精準控制溫度與壓力，使茶湯濃郁、香氣飽滿、層次分明，適合追求快速、方便且保留茶香的使用者。
                 </p>
               </div>
             </div>
