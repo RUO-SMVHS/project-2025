@@ -752,6 +752,66 @@
 
 
 
+<div class="container my-5">
+  <div class="card shadow-2 text-center" style="border: 1px solid #e0e0e0; border-radius: 15px;">
+    <div class="card-body py-5">
+      <h2 class="fw-bold mb-4" style="color: #3A5A40;">🍵 找尋你的命定之茶</h2>
+      <p class="text-muted mb-5">只需兩個問題，我們為您推薦現在最適合的一杯。</p>
+
+      <div id="quiz-container">
+        <div id="step-1">
+          <h5 class="mb-4">1. 您現在的精神狀態如何？</h5>
+          <button class="btn btn-outline-success btn-rounded m-2" onclick="setQuizData('status', 'tired')">有點累，想提神</button>
+          <button class="btn btn-outline-success btn-rounded m-2" onclick="setQuizData('status', 'relax')">很放鬆，想品味</button>
+        </div>
+
+        <div id="step-2" style="display: none;">
+          <h5 class="mb-4">2. 您偏好哪種口感？</h5>
+          <button class="btn btn-outline-success btn-rounded m-2" onclick="calculateResult('fresh')">清新草本香</button>
+          <button class="btn btn-outline-success btn-rounded m-2" onclick="calculateResult('rich')">醇厚回甘感</button>
+        </div>
+      </div>
+
+      <button class="btn btn-link btn-sm mt-4 text-muted" onclick="resetQuiz()" id="resetQuizBtn" style="display: none;">重新測試</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="resultModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center pb-5">
+        <div class="display-1 mb-3">🍃</div>
+        <h3 class="fw-bold mb-3" id="resultTitle">您的命定茶是...</h3>
+        <p class="text-muted px-4" id="resultDesc"></p>
+        <button class="btn btn-success mt-4" data-mdb-dismiss="modal">我知道了</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -831,6 +891,15 @@
       btn.className = 'btn btn-success btn-lg';
       updateDefaultTime();
     }
+
+
+
+
+
+
+
+
+
 
     // 初始化顯示
     window.onload = updateDisplay;
