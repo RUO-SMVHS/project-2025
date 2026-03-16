@@ -704,7 +704,39 @@
 
 
 
+<div class="container my-5">
+  <div class="card shadow-5">
+    <div class="card-body">
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-center text-lg-start">
+          <h3 class="fw-bold" style="color: #3A5A40;"><i class="fas fa-stopwatch me-2"></i>計時小幫手</h3>
+          <p class="text-muted">選擇茶種，我們幫你精準掌控黃金沖泡時間!</p>
+        </div>
+        <div class="col-lg-8">
+          <div class="d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center gap-3">
+            <div class="form-outline" style="width: 200px;" data-mdb-input-init>
+              <select id="teaTypeSelect" class="form-select border" onchange="updateDefaultTime()">
+                <option value="60">綠茶 (1分鐘)</option>
+                <option value="150">烏龍茶 (2.5分鐘)</option>
+                <option value="240">紅茶 (4分鐘)</option>
+                <option value="custom">自訂時間</option>
+              </select>
+            </div>
 
+            <div class="display-6 fw-bold text-primary" id="timerDisplay" style="min-width: 120px;">01:00</div>
+
+            <button type="button" class="btn btn-success btn-lg" id="startBtn" onclick="toggleTimer()">
+              <i class="fas fa-play me-2"></i>開始
+            </button>
+            <button type="button" class="btn btn-outline-danger btn-lg" onclick="resetTimer()">
+              <i class="fas fa-redo"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -731,5 +763,78 @@
   <!-- MDB PLUGINS -->
   <script type="text/javascript" src="plugins/js/all.min.js"></script>
   <!-- Custom scripts -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+    let timerInterval;
+    let timeLeft = 60;
+    let isRunning = false;
+
+    // 當下拉選單切換時，更新預設秒數
+    function updateDefaultTime() {
+      if (isRunning) resetTimer(); // 如果正在計時就重置
+      const select = document.getElementById('teaTypeSelect');
+
+      if (select.value === 'custom') {
+        const userTime = prompt("請輸入沖泡秒數 (10-600秒):", "180");
+        timeLeft = (userTime >= 10 && userTime <= 600) ? parseInt(userTime) : 60;
+      } else {
+        timeLeft = parseInt(select.value);
+      }
+      updateDisplay();
+    }
+
+    // 更新畫面上的數字
+    function updateDisplay() {
+      const mins = Math.floor(timeLeft / 60);
+      const secs = timeLeft % 60;
+      const display = document.getElementById('timerDisplay');
+      display.innerText = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+
+      // 最後 10 秒變紅色提醒
+      if (timeLeft <= 10 && timeLeft > 0) {
+        display.style.color = "#dc3545";
+      } else {
+        display.style.color = "#1266f1";
+      }
+    }
+
+    // 開始或暫停計時
+    function toggleTimer() {
+      const btn = document.getElementById('startBtn');
+      if (isRunning) {
+        // 執行暫停
+        clearInterval(timerInterval);
+        btn.innerHTML = '<i class="fas fa-play me-2"></i>繼續';
+        btn.className = 'btn btn-warning btn-lg';
+      } else {
+        // 執行開始
+        btn.innerHTML = '<i class="fas fa-pause me-2"></i>暫停';
+        btn.className = 'btn btn-danger btn-lg';
+        timerInterval = setInterval(() => {
+          timeLeft--;
+          updateDisplay();
+          if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert("時間到！請立即將茶湯倒出，享受美味。");
+            resetTimer();
+          }
+        }, 1000);
+      }
+      isRunning = !isRunning;
+    }
+
+    // 重置計時器
+    function resetTimer() {
+      clearInterval(timerInterval);
+      isRunning = false;
+      const btn = document.getElementById('startBtn');
+      btn.innerHTML = '<i class="fas fa-play me-2"></i>開始';
+      btn.className = 'btn btn-success btn-lg';
+      updateDefaultTime();
+    }
+
+    // 初始化顯示
+    window.onload = updateDisplay;
+  </script>
+
+
 </html>
