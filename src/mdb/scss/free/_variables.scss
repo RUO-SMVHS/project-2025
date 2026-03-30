@@ -636,11 +636,12 @@ $min-contrast-ratio: 2 !default;
 
 // scss-docs-start theme-color-variables
 $primary: #4B6B50 !default;
-$secondary: #9fa6b2 !default;
-$success: #14a44d !default;
+$secondary: #706F57 !default;
+$success: #9BA193 !default;
+
 $danger: #dc4c64 !default;
 $warning: #e4a11b !default;
-$info: #54b4d3 !default;
+$info: #abd1c6 !default;
 $light: #fbfbfb !default;
 $dark: #332d2d !default;
 // scss-docs-end theme-color-variables
@@ -650,6 +651,7 @@ $theme-colors: (
   'primary': $primary,
   'secondary': $secondary,
   'success': $success,
+
   'danger': $danger,
   'warning': $warning,
   'info': $info,
